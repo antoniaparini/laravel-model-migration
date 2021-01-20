@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('homepage');
+/**
+ * Route::get('/', 'HomeController@nomemetodo')->name('homepage');
+ * Il nomemetodo deve essere riportato in HomeController o nel relativo controller
+ */
+Route::get('/', 'HomeController@index')->name('homepage');
